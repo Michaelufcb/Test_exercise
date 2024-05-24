@@ -11,6 +11,7 @@ class Circular_buffer_exp0:
     def __init__(self, size):
         # Ограничение ввода
         if size >= 1:
+            # Размер буфера
             self.size = size
         else:
             raise ValueError('Размер буфера не может быть меньше 1')
@@ -21,7 +22,9 @@ class Circular_buffer_exp0:
         self.num_current_index = 0
 
     def add(self, meaning):
+        # Добавляем в глобальный список
         self.buffer_date.append(meaning)
+        # печатаем буфер
         self.print_buffer()
 
     def print_buffer(self, ind=-1):
@@ -46,8 +49,8 @@ class Circular_buffer_exp0:
 
 
 # Вторая реализация отличается от первой тем, что мы переключаем индексы статического списка.
-# Плюсы:
-# Минусы:
+# Плюсы: Не заполняет лишнюю память, в среднем скорость работы выше
+# Минусы:Громоздкость кода
 class Circular_buffer_exp1:
     # Инициализируем класс
     def __init__(self, size):
