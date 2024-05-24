@@ -9,7 +9,6 @@ def isEven_lite(value):
 # конечное время
 end_time = time.time()
 
-
 start_time_ = time.time()
 
 def isEven(value):
